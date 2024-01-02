@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-_export_star(require("./dictionary"), exports);
+_export_star(require("./enumDep"), exports);
 _export_star(require("./anotherDep"), exports);
 function _export_star(from, to) {
     Object.keys(from).forEach(function(k) {

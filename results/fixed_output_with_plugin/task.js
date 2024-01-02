@@ -43,14 +43,14 @@ function _interop_require_wildcard(obj, nodeInterop) {
     }
     return newObj;
 }
-var _dictionary = /*#__PURE__*/ _interop_require_wildcard(require("./dictionary"));
-Object.keys(_dictionary).forEach(function(key) {
+var _enumDep = /*#__PURE__*/ _interop_require_wildcard(require("./enumDep"));
+Object.keys(_enumDep).forEach(function(key) {
     if (key === "default" || key === "__esModule") return;
     if (Object.prototype.hasOwnProperty.call(exports, key)) return;
     Object.defineProperty(exports, key, {
         enumerable: true,
         get: function get() {
-            return _dictionary[key];
+            return _enumDep[key];
         },
         configurable: true
     });
