@@ -6,6 +6,8 @@ When a TypeScript enum is re-exported in a barrel file and a sub-dependency of t
 TypeError: Cannot read properties of undefined (reading 'A')
 ```
 
+![dependency structure of files](bug_explanation.png)
+
 This is due to how `swc_mut_cjs_exports` groups all the `require` calls at the top of the transpiled file and then adds the keys to the `exports` object after all of those `require`. See [`results/output_with_plugin/task.js`](results/output_with_plugin/task.js).
 
 I manually modified the code outputted by the plugin to add the relevant keys to the `exports` object immediately after the relevant `require` call. See [`results/fixed_output_with_plugin/task.js`](results/fixed_output_with_plugin/task.js).
