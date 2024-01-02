@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/swcrc",
+	"jsc": {
+		"parser": {
+			"syntax": "typescript"
+		},
+		"experimental": {
+			"plugins": [
+				[
+					"swc_mut_cjs_exports",
+					{}
+				]
+			]
+		}
+	},
+	"module": {
+		"type": "commonjs"
+	}
+}
